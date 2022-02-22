@@ -18,7 +18,7 @@ app.post('/ceic-jekyll', (req, res) => {
 	console.log('received webhook')
 	console.log(req.body)
 	exec('cd ~/c4c/ceic-jekyll && git pull')
-	exec('cd ~/c4c/ceic-jekyll && jekyll build -d ~/c4c/jekyll-ceic -b https://nickdolf.com/jekyll-ceic')
+	exec('cd ~/c4c/ceic-jekyll && jekyll build -d ~/c4c/jekyll-ceic -b /jekyll-ceic')
 	res.status(200).end()
 })
 

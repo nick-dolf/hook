@@ -19,6 +19,13 @@ app.post('/hook', (req, res) => {
 	res.status(200).end()
 })
 
+// Staging Site for Tatlo
+app.post('/tatlo', (req, res) => {
+	exec('cd ~/jekyll/tatlo && git pull')
+	exec('cd ~/jekyll/tatlo && jekyll build -d ~/tatlo -b /tatlo')
+	res.status(200).end()
+})
+
 // Staging Site for Code for Chicago CEIC project
 app.post('/ceic-jekyll', (req, res) => {
 	exec('cd ~/c4c/ceic-jekyll && git pull')

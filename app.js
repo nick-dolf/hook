@@ -19,6 +19,12 @@ app.post('/hook', (req, res) => {
 	res.status(200).end()
 })
 
+// Aoclock
+app.post('/aoclock', (req, res) => {
+	exec('cd ~/aoclock && git pull')
+	res.status(200).end()
+})
+
 // Staging Site for Tatlo
 app.post('/tatlo', (req, res) => {
 	exec('cd ~/jekyll/tatlo && git pull')

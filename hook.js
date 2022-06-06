@@ -19,6 +19,12 @@ app.post('/hook', (req, res) => {
 	res.status(200).end()
 })
 
+// Staging authentication
+app.post('/staging-auth', (req, res) => {
+	exec('cd ~/staging-auth && git pull')
+	res.status(200).end()
+})
+
 // Aoclock
 app.post('/aoclock', (req, res) => {
 	exec('cd ~/aoclock && git pull')

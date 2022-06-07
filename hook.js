@@ -33,8 +33,8 @@ app.post('/aoclock', (req, res) => {
 
 // Staging Site for Tatlo
 app.post('/tatlo', (req, res) => {
-	exec('cd ~/jekyll/tatlo && git pull')
-	exec('cd ~/jekyll/tatlo && jekyll build -d ~/tatlo -b /tatlo')
+	exec('cd ~/src/tatlo && git pull')
+	exec('cd ~/src/tatlo && jekyll build -d ~staging/tatlo -b /tatlo')
 	res.status(200).end()
 })
 

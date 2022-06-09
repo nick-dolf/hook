@@ -20,8 +20,8 @@ app.post('/hook', (req, res) => {
 })
 
 // Staging authentication
-app.post('/staging-auth', (req, res) => {
-	exec('cd ~/staging-auth && git pull')
+app.post('/admin', (req, res) => {
+	exec('cd ~/admin && git pull')
 	res.status(200).end()
 })
 

@@ -40,8 +40,8 @@ app.post('/tatlo', (req, res) => {
 
 // Staging Site for Code for Chicago CEIC project
 app.post('/ceic-jekyll', (req, res) => {
-	exec('cd ~/c4c/ceic-jekyll && git pull')
-	exec('cd ~/c4c/ceic-jekyll && bundle exec jekyll build -d ~/c4c/jekyll-ceic -b /jekyll-ceic')
+	exec('cd ~/src/ceic && git pull')
+	exec('cd ~/src/ceic && make staging')
 	res.status(200).end()
 })
 

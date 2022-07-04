@@ -31,6 +31,13 @@ app.post('/aoclock', (req, res) => {
 	res.status(200).end()
 })
 
+// Chords
+app.post('/chords', (req, res) => {
+	exec('cd ~/src/chords && git pull')
+	exec('cd ~/src/chords && npm run build && rm -r ~/build/chords && mv build ~/build/chords')
+	res.status(200).end()
+})
+
 // Staging Site for Tatlo
 app.post('/tatlo', (req, res) => {
 	exec('cd ~/src/tatlo && git pull')

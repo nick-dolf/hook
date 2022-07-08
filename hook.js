@@ -39,7 +39,7 @@ app.post('/chords', (req, res) => {
 })
 
 // Chords Api
-app.post('/chords', (req, res) => {
+app.post('/api-chords', (req, res) => {
 	exec('cd ~/api/api-chords && git pull')
 	res.status(200).end()
 })

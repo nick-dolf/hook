@@ -44,6 +44,12 @@ app.post('/api-chords', (req, res) => {
 	res.status(200).end()
 })
 
+// Jade Website
+app.post('/jade', (req, res) => {
+	exec('cd ~/jade && git pull')
+	res.status(200).end()
+})
+
 // Staging Site for Tatlo
 app.post('/tatlo', (req, res) => {
 	exec('cd ~/src/tatlo && git pull')

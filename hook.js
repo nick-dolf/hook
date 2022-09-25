@@ -46,7 +46,7 @@ app.post('/api-chords', (req, res) => {
 
 // Jade Website
 app.post('/jade', (req, res) => {
-	exec('cd ~/jade && git pull')
+	exec('cd ~/jade && git pull && pm2 restart jade')
 	res.status(200).end()
 })
 
